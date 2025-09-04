@@ -2,6 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 
+
+// admin
 Route::get('/', function () {
-    return view('pages.homepage.homepage');
+    return view('pages.admin.homepage.homepage');
 }) ->name('home');
+
+
+
+
+// user
