@@ -7,10 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ config('app.name') }} - @yield('title', '')</title>
 
-    @vite(['resources/sass/app.scss'])
-
     {{-- Favicon --}}
     <link rel="shortcut icon" href="{{ asset('favicon.svg') }}" type="image/x-icon">
+
+    @vite(['resources/sass/app.scss'])
+
+    @php
+        $files = File::glob(public_path('build/assets/*.css'));
+    @endphp
+
+    @foreach ($files as $file)
+        <link rel="stylesheet" href="{{ asset('build/assets/' . basename($file)) }}" />
+    @endforeach
 
     {{-- Bootstrap 5 --}}
     <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
