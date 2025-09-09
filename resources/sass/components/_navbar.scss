@@ -25,7 +25,7 @@ nav {
                 @include variable.font-style("subtitle");
 
                 &:hover {
-                    background-color: variable.$primary;
+                    color: variable.$primary;
                 }
 
                 &.active {

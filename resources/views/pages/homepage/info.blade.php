@@ -6,9 +6,17 @@
             'titleCard' => 'Total Kas',
             'money' => '32.000.000',
             'months' => 'Total Semua',
+            'class' => 'total-kas',
         ])
-        <div class="swiper-slide">Slide 1</div>
+        @include('components.homepage.card-info', [
+            'titleCard' => 'Pengeluaran',
+            'money' => '32.000.000',
+            'months' => 'September',
+            'class' => 'pengeluaran',
+        ])
     </div>
+
+    {{-- <div class="swiper-pagination"></div> --}}
 </div>
 
 @push('script')
@@ -22,6 +30,10 @@
             centeredSlides: true, // agar card center di layar
             loop: false, // jika tidak ingin infinite loop
             grabCursor: true, // cursor seperti drag saat di desktop
+
+            pagination: {
+                el: '.swiper-pagination',
+            },
         });
     </script>
 @endpush

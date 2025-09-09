@@ -1,8 +1,8 @@
-@props(['titleCard', 'money', 'months'])
+@props(['titleCard', 'money', 'months', 'class'])
 
 <div class="swiper-slide card-info">
     <div class="top">
-        <h1 class="titlecard">{{ $titleCard }}</h1>
+        <h1 class="titlecard {{ $class }}">{{ $titleCard }}</h1>
         <div class="icon">
             <i class="fa-solid fa-money-check"></i>
         </div>

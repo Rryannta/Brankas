@@ -1,0 +1,15 @@
+@use "../global/variable";
+
+@mixin head {
+    background-color: variable.$primary;
+    padding: variable.$padding-x;
+
+    .text-1 {
+        @include variable.font-style("heading");
+        color: variable.$secondary;
+
+        span {
+            @include variable.font-style("subtitle");
+        }
+    }
+}

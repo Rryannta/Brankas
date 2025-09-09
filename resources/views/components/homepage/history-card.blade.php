@@ -1,0 +1,1 @@
+@props(['titleCard', 'money', 'months', 'class'])

@@ -15,11 +15,18 @@
         align-items: center;
 
         .titlecard {
-            background-color: rgb(182, 234, 255);
             padding: 8px 12px;
             border-radius: 16px;
             @include variable.font-style("subtitle");
             color: variable.$text;
+
+            &.total-kas {
+                background-color: rgb(182, 234, 255);
+            }
+
+            &.pengeluaran {
+                background-color: rgb(255, 202, 187);
+            }
         }
 
         .icon {
