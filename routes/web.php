@@ -3,12 +3,19 @@
 use Illuminate\Support\Facades\Route;
 
 
-// admin
 Route::get('/', function () {
-    return view('pages.admin.homepage.homepage');
+    return view('pages.homepage.homepage');
 }) ->name('home');
 
+Route::get('/profile', function () {
+    return view('pages.profile.profile');
+}) ->name('profile');
+
+Route::get('/history', function () {
+    return view('pages.history.history');
+}) ->name('history');
 
 
-
-// user
+Route::get('/finance', function () {
+    return view('pages.finance.finance');
+}) ->name('finance');

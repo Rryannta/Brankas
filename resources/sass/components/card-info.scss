@@ -1,0 +1,45 @@
+@use "../global/variable";
+
+@mixin card-info {
+    border-radius: 16px;
+    box-shadow: 0px 0px 8px gray;
+    padding: 20px;
+
+    min-height: 180px;
+    width: 100%;
+
+    .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-items: center;
+
+        .titlecard {
+            background-color: rgb(182, 234, 255);
+            padding: 8px 12px;
+            border-radius: 16px;
+            @include variable.font-style("subtitle");
+            color: variable.$text;
+        }
+
+        .icon {
+            padding: 10px;
+            border-radius: 50%;
+            background-color: variable.$primary;
+            i {
+                font-size: 20px;
+                color: white;
+            }
+        }
+    }
+
+    .money {
+        @include variable.font-style("heading");
+        color: #000;
+        margin: 10px 0;
+    }
+
+    .months {
+        @include variable.font-style("heading");
+    }
+}

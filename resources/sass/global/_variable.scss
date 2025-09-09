@@ -1,0 +1,37 @@
+// variable
+
+// warna
+$primary: #6d73ff;
+$secondary: #ecebff;
+$third: #fef7ee;
+$bg-white: #edf8f9;
+$text: #0c0d23;
+
+// Font Variants
+$font-variants: (
+    "regular": (
+        "font-size": 14px,
+        "font-weight": 400,
+    ),
+    "subtitle": (
+        "font-size": 16px,
+        "font-weight": 500,
+    ),
+    "title": (
+        "font-size": 20px,
+        "font-weight": 600,
+    ),
+    "heading": (
+        "font-size": 24px,
+        "font-weight": 700,
+    ),
+    "bold": (
+        "font-size": 32px,
+        "font-weight": 900,
+    ),
+);
+@mixin font-style($variant) {
+    $style: map-get($font-variants, $variant);
+    font-size: map-get($style, "font-size");
+    font-weight: map-get($style, "font-weight");
+}

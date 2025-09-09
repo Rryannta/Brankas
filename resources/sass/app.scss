@@ -1,3 +1,4 @@
+// base
 @use "./base/base";
 
 // pages
@@ -6,6 +7,7 @@
 // components
 @use "./components/footer";
 @use "./components/navbar";
+@use "./components/card-info.scss";
 
 // global
 @use "./global/variable";

@@ -1,0 +1,18 @@
+@use "../global/variable";
+@use "../components/card-info.scss";
+
+.homepage {
+    position: relative;
+    overflow: hidden;
+    
+
+    .card-container {
+        padding: 20px; // jarak container dengan sisi layar
+
+        .swiper-wrapper {
+            .card-info {
+                @include card-info.card-info;
+            }
+        }
+    }
+}
