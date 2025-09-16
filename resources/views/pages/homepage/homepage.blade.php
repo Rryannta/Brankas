@@ -12,6 +12,8 @@
         {{-- Admin --}}
         @include('pages.homepage.pemasukan')
 
+
+        {{-- all --}}
         @include('pages.homepage.history')
     </section>
 
