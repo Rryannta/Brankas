@@ -55,4 +55,144 @@
             }
         }
     }
+
+    .pemasukan {
+        padding: variable.$padding;
+        .card-pemasukan {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgb(244, 234, 234);
+            width: 100%;
+            position: relative;
+
+            .text-1 {
+                @include variable.font-style("title");
+            }
+
+            .info {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .money2 {
+                    @include variable.font-style("heading");
+                    margin-bottom: 0px;
+
+                    &.hijau {
+                        color: #16a34a; // hijau
+                    }
+
+                    &.merah {
+                        color: #dc2626;
+                    }
+                }
+
+                .right {
+                    .icon-up,
+                    .icon-down {
+                        font-size: 20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 45px;
+                        height: 45px;
+                        border-radius: 50%;
+                    }
+                    .icon-up {
+                        color: #16a34a;
+                        background-color: rgba(0, 128, 0, 0.1);
+                    }
+                    .icon-down {
+                        color: #dc2626;
+                        background-color: rgb(254, 234, 229);
+                    }
+                    .d-none {
+                        display: none;
+                    }
+                    .icon-up,
+                    .icon-down {
+                        transition: opacity 0.3s ease, transform 0.3s ease;
+                    }
+
+                    .icon-up.d-none,
+                    .icon-down.d-none {
+                        opacity: 0;
+                        transform: scale(0.8);
+                    }
+                }
+            }
+
+            .months {
+                margin-top: 15px;
+                position: relative;
+
+                .month-selector {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border: 1px solid #ddd;
+                    padding: 8px 12px;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    background: variable.$secondary;
+
+                    .bulan {
+                        margin: 0;
+                        @include variable.font-style("title");
+                        color: variable.$text;
+                    }
+
+                    i {
+                        font-size: 1.2rem;
+                        color: #555;
+                        cursor: pointer;
+                    }
+                }
+
+                /* Popup bulan */
+                .month-popup {
+                    display: none;
+                    position: absolute;
+                    top: 50px;
+                    left: 0;
+                    width: 100%;
+                    background: white;
+                    border: 1px solid #ddd;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                    z-index: 100;
+
+                    ul {
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
+
+                        /* Batasi tinggi hanya 3 bulan yang terlihat */
+                        max-height: 150px; // kira-kira tinggi 3 item
+                        overflow-y: auto;
+
+                        /* Tambahkan scrollbar custom */
+                        scrollbar-width: thin;
+                        scrollbar-color: #ccc #f9f9f9;
+
+                        li {
+                            padding: 10px;
+                            cursor: pointer;
+                            transition: background 0.2s;
+
+                            &:hover {
+                                background: #f3f4f6;
+                            }
+                        }
+                    }
+
+                    /* Saat popup aktif */
+                    &.show {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
 }

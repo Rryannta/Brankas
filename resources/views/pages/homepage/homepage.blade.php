@@ -8,9 +8,11 @@
         @include('components.head')
         {{-- User --}}
         @include('pages.homepage.info')
-        @include('pages.homepage.history')
 
         {{-- Admin --}}
+        @include('pages.homepage.pemasukan')
+
+        @include('pages.homepage.history')
     </section>
 
     @include('components.footer')

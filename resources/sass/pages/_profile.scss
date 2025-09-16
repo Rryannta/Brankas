@@ -1,0 +1,14 @@
+@use "../global/variable";
+@use "../components/card.scss";
+@use "../components/head";
+
+.profile {
+    position: relative;
+    overflow: hidden;
+
+    header {
+        @include head.head;
+    }
+
+    
+}

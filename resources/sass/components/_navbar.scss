@@ -6,6 +6,8 @@ nav {
     left: 0;
     right: 0;
     width: 100%;
+    z-index: 999;
+    background-color: variable.$bg-white;
     // height: 100%;
     // padding: 0px 20px;
 
@@ -33,7 +35,7 @@ nav {
                 }
 
                 i {
-                  font-size: 22px;
+                    font-size: 22px;
                 }
             }
         }
