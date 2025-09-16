@@ -30,8 +30,8 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 25px 20px 5px 20px;
-            border-top: 1px solid rgb(91, 91, 91);
+            padding: 5px 20px 5px 20px;
+            // border-top: 1px solid rgb(91, 91, 91);
             border-radius: 50px;
             margin-top: 20px;
 
@@ -46,10 +46,10 @@
             }
         }
         .bottom {
-          padding: 15px 25px;
-          display: flex;
-          flex-direction: column;
-          gap: 15px;
+            padding: 15px 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
             .history-card {
                 @include card.history-card;
             }
