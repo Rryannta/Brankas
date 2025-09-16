@@ -1,5 +1,5 @@
 @use "../global/variable";
-@use "../components/card-info.scss";
+@use "../components/card.scss";
 @use "../components/head";
 
 .homepage {
@@ -7,23 +7,52 @@
     overflow: hidden;
 
     header {
-      @include head.head;
+        @include head.head;
     }
-    
+
     .card-container {
-        padding: variable.$padding; 
+        padding: variable.$padding;
         height: 100%;
 
         .swiper-wrapper {
             .card-info {
-                @include card-info.card-info;
+                @include card.card-info;
             }
         }
 
         .swiper-pagination {
-          margin-top: 20px;
+            margin-top: 20px;
         }
     }
 
-    
+    .history {
+        .top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 25px 20px 5px 20px;
+            border-top: 1px solid rgb(91, 91, 91);
+            border-radius: 50px;
+            margin-top: 20px;
+
+            .text-1 {
+                @include variable.font-style("title");
+            }
+
+            .see-all {
+                @include variable.font-style("regular");
+                text-decoration: none;
+                color: variable.$primary;
+            }
+        }
+        .bottom {
+          padding: 15px 25px;
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+            .history-card {
+                @include card.history-card;
+            }
+        }
+    }
 }

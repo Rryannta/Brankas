@@ -1,0 +1,140 @@
+@use "../global/variable";
+
+@mixin card-info {
+    border-radius: 16px;
+    box-shadow: 0px 0px 8px gray;
+    padding: 20px;
+
+    min-height: 180px;
+    width: 100%;
+
+    .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-items: center;
+
+        .titlecard {
+            padding: 8px 12px;
+            border-radius: 16px;
+            @include variable.font-style("subtitle");
+            color: variable.$text;
+
+            &.total-kas {
+                background-color: rgb(182, 234, 255);
+            }
+
+            &.pengeluaran {
+                background-color: rgb(255, 202, 187);
+            }
+        }
+
+        .icon {
+            padding: 10px;
+            border-radius: 50%;
+            background-color: variable.$primary;
+        }
+    }
+
+    .money {
+        @include variable.font-style("heading");
+        color: #000;
+        margin: 10px 0;
+    }
+
+    .months {
+        @include variable.font-style("heading");
+    }
+}
+
+@mixin history-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 15px;
+    // border: .5px solid rgb(91, 91, 91);
+    box-shadow: 0px 0px 10px rgb(244, 234, 234);
+
+    .left {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%; // membuat background jadi lingkaran
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &.income {
+                background-color: rgba(0, 128, 0, 0.1); // hijau transparan
+            }
+            &.expanse {
+                background-color: rgb(254, 234, 229);
+            }
+            svg {
+                width: 25px;
+                height: 25px;
+
+                &.income {
+                    fill: #28a745;
+                    stroke: #28a745; // Opsional: warna garis
+                }
+
+                &.expanse {
+                    fill: #e8593c;
+                    stroke: #e8593c;
+                    transform: rotate(-145deg);
+                }
+            }
+        }
+
+        .info {
+            .title {
+                @include variable.font-style("title");
+                margin-bottom: 0px;
+            }
+            .subtitle {
+                @include variable.font-style("subtitle");
+                font-weight: 300;
+                margin-bottom: -2px;
+            }
+            .months {
+                @include variable.font-style("regular");
+                font-weight: 300;
+            }
+        }
+    }
+
+    .money-container {
+        display: flex;
+        flex-direction: column;
+
+        .money {
+            &.expanse {
+                color: variable.$text;
+            }
+            &.income {
+                color: #28a745;
+            }
+        }
+        .moneyinfo {
+            &.income {
+                color: #28a745;
+                background-color: rgba(0, 128, 0, 0.1);
+            }
+            &.expanse {
+                color: #e8593c;
+                background-color: rgb(254, 234, 229);
+            }
+            text-align: center;
+            border-radius: 10px;
+            @include variable.font-style("regular");
+            width: fit-content;
+            padding: 0px 7px;
+        }
+    }
+}

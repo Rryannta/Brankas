@@ -7,12 +7,14 @@
             'money' => '32.000.000',
             'months' => 'Total Semua',
             'class' => 'total-kas',
+            'icon' => 'icons/total.svg'
         ])
         @include('components.homepage.card-info', [
             'titleCard' => 'Pengeluaran',
             'money' => '32.000.000',
             'months' => 'September',
             'class' => 'pengeluaran',
+            'icon' => 'icons/pengeluaran.svg'
         ])
     </div>
 
